@@ -6,9 +6,11 @@ import './App.css';
 import Nav from './components/Nav';
 import Photos from './components/Photos';
 import NotFound from './components//NotFound';
+import React from 'react';
 
 
-function App() {
+class App extends React.Component {
+  render () {
   return (
    <div>
      <Nav />
@@ -16,6 +18,7 @@ function App() {
    <NotFound />
    </div>
   );
+  }
 }
 
 export default App;
