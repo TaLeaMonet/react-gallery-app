@@ -6,8 +6,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Photos from './components/Photos';
 import NotFound from './components//NotFound';
-import React from 'react';
-
+import React, { Component } from 'react';
 
 class App extends React.Component {
   render () {

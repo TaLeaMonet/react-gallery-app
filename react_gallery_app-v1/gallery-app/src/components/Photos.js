@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Photos = (props) => {
+const About extends Component {
+  render() {
   return (
     <div class="photo-container">
         <h2>Results</h2>
@@ -20,6 +21,7 @@ const Photos = (props) => {
           </ul>
     </div>      
   );
+  }
 }
 
 export default Photos;
