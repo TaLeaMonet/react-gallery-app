@@ -15,8 +15,6 @@ const Search = (props) => {
             </svg>
         </button>
       </form>
-      
-        Placeholder Seach Title
     </div>
   );
 }
