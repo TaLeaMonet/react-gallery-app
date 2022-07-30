@@ -21,8 +21,8 @@ class App extends Component {
  handleGetRequest = async (e) => {
    e.preventDefault()
    const searchTerm = e.target.elements.searchValue.value
-   const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${searchTerm}&per_page=24&format=json&nojsoncallback=1`
-   const request = await fetch(url)
+   const data = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${searchTerm}&per_page=24&format=json&nojsoncallback=1`
+   const request = await fetch(data)
    const response = await request.json()
    
    this.setState({ images: response.photos.photo})
