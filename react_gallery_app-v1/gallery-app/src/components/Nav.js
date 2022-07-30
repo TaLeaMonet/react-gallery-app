@@ -6,9 +6,9 @@ class Nav extends Component {
   return (
     <div className="nav">
         <ul>
-        <li><NavLink to={`${}/`}>Cats</NavLink></li>
-        <li><NavLink to={`${}/`}>Dogs</NavLink></li>
-        <li><NavLink to={`${}/`}>Computers</NavLink></li>
+        <li><NavLink to={'/photos'}>Cats</NavLink></li>
+        <li><NavLink to={'/photos'}>Dogs</NavLink></li>
+        <li><NavLink to={'/photos'}>Computers</NavLink></li>
         </ul>
     </div>
    );
