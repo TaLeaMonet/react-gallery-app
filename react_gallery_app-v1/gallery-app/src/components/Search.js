@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Router from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 
 const Search = (props) => {
 
   return (
-    <div className="search-form">
-
+    <div className="search-form" style={{ display: 'block', width: 700, padding: 30 }}>
+      <Container>
       <form className="search-form" onSubmit={props.handleGetRequest}>
           <input type="text" name="searchValue" placeholder="Search" />
           <button type="submit" className="search-button">
@@ -15,6 +16,7 @@ const Search = (props) => {
             </svg>
         </button>
       </form>
+      </Container>
     </div>
   );
 }

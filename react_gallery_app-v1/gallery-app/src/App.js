@@ -1,14 +1,16 @@
 import apiKey from './config';
-import { BrowserRouter as Router, 
+import { BrowserRouter, 
          Switch,
          Route,
          } from "react-router-dom";
 import './App.css';
 import Nav from './components/Nav';
 import Search from './components/Search';
+import PhotoResults from './components/PhotoResults';
 import Photos from './components/Photos';
 import NotFound from './components//NotFound';
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
 
 
 class App extends Component {
@@ -28,13 +30,26 @@ class App extends Component {
    this.setState({ images: response.photos.photo})
    console.log(searchTerm);
  }
+
+componentDidMount() {
+  this.handleGetRequest();
+}
+
   render () {
     console.log(this.state.images)
   return (
       <div>
-       <Search handleGetRequest={this.handleGetRequest} />
-       <Photos images={this.state.images}/>
+        <Search handleGetRequest={this.handleGetRequest} />
+          <Switch>
+           <Nav />
+              <Route exact path='/cats' component={PhotoResults} />
+              <Route path='/dogs' component={PhotoResults} />
+              <Route path='/computers' component={PhotoResults} />
+          </Switch>
+          <PhotoResults images={this.state.images} />
        </div>
+
+       
   );
   }
 }
