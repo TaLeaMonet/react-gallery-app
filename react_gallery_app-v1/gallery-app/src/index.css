@@ -19,6 +19,11 @@ a {
   text-decoration: none;
 }
 
+.nav-link {
+  text-decoration: none;
+
+}
+
 .search-form {
   max-width: 460px;
   display: flex;
